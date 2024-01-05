@@ -1,0 +1,121 @@
+:root {
+    --VeryDarkBlue: hsl(233, 47%, 7%);
+    --DarkDesaturatedBlue: hsl(244, 38%, 16%);
+    --SoftViolet: hsl(277, 64%, 61%);
+    --White: hsl(0, 0%, 100%);
+    --SlightlyTransparentWhiteV1: hsla(0, 0%, 100%, 0.75);
+    --SlightlyTransparentWhiteV2: hsla(0, 0%, 100%, 0.6);
+    --MainFont: 'Inter', sans-serif;
+    --SecondFont: 'Lexend Deca', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--VeryDarkBlue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 40px;
+    margin-top: 40px;
+}
+
+h2,p {
+    color: var(--White);
+}
+
+.container {
+    background-color: var(--DarkDesaturatedBlue);
+    width: 900px;
+    border-radius: 8px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.section-1 {
+    padding: 2.5rem;
+}
+
+.title {
+    font-family: var(--MainFont);
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.title span {
+    color: var(--SoftViolet);
+}
+
+.paragraph {
+    font-family: var(--SecondFont);
+    font-weight: 400;
+    color: var(--SlightlyTransparentWhiteV2);
+    margin-bottom: 32px;
+}
+
+.container-rates {
+    display: flex;
+    gap: 16px;
+}
+
+.range {
+    font-family: var(--MainFont);
+    font-weight: 800;
+    font-size: 32px;
+    padding: 0;
+    margin: 0 0 8px 0;
+}
+
+.type-range {
+    text-transform: uppercase;
+    font-family: var(--MainFont);
+    font-weight: 400;
+    color: var(--SlightlyTransparentWhiteV2);
+    padding: 0;
+    margin: 0;
+}
+
+.section-2 {
+    overflow: hidden;
+    position: relative;
+}
+
+.header-image {
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+}
+
+.bg-pink {
+    width: 100%;
+    height: 100%;
+    background-color: var(--SoftViolet);
+    position: absolute;
+    z-index: 10;
+    opacity: 70%;
+}
+
+@media (max-width: 600px) {
+    .container {
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr;
+    }
+
+    .section-1 {
+        text-align: center;
+    }
+
+    .section-2 {
+        height: 300px;
+        width: auto;
+        grid-row: 1;
+    }
+
+    .container-rates {
+        flex-direction: column;
+    }
+  }
